@@ -122,26 +122,31 @@ var family = function(){
         this.diagnosisText();
     };
 
-    /* this.ifElseCondition = function(text){
+    this.ifElseCondition = function(text){
         element(by.id('pVCFifthCardAddBtn')).click();
         this.relationshipDropdown();
         this.diagnosisText();
         browser.sleep(3000);
-        element(by.id('fmhDeceased')).click();
-        element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar li')).get(0).getText().then(function(text){
+        // element(by.id('fmhDeceased')).click();
+        var deathage,
+        css;
+
+        var css = deathage.getAttribute('class');
+        expect(css).toMatch('disabled');
+        element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar')).get(0).getText().then(function(text){
             console.log("");
             if(text === "Yes"){
-                element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar li')).get(0).click();
+                element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar')).get(0).click();
                     console.log("option is available");
             }
             else
-                element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar li')).get(1).click(); 
+                element.all(by.css('.item-list.ng-isolate-scope.custom-scrollbar')).get(1).click(); 
             
         });
         // if(text === "No"){
         //     console.log("options not available");
         // }
         browser.sleep(5000);
-    }; */
+    };
 };
 module.exports = new family();
