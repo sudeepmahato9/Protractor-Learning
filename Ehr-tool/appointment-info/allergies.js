@@ -59,24 +59,26 @@ var allergies = function() {
         element(by.id('listItem2')).click();
         element(by.id('dpYearDropdown')).click();
         element(by.id('listItem2')).click();
-        var hours =  element(by.className('duration-up-arrow duration-arrow-common'));
+        var hoursIncrement =  element(by.xpath('//a[@data-action="incrementHours"]/span'));
         
             for (i = 0; i <5; i++) {
-                hours.click();
+                hoursIncrement.click();
             }
             browser.sleep(3000);
-        // var minutes = element(by.css('div[title="Increment Minute"]'));
-         
-        //     for (i=0; i<5; i++) {
-        //         minutes.click();
-        //     }
 
-       
-        // element.all(by.css("duration-up-arrow duration-arrow-common")).filter(function (label, index) {
-        //     return index <= 5;
-        // }).each(function (label) {
-        //     label.click();
-        // });
+        var minutesIncrement = element(by.xpath('//a[@data-action="incrementMinutes"]/span'));
+         
+            for (i=0; i<5; i++) {
+                minutesIncrement.click();
+            }
+       browser.sleep(3000);
+
+       var minutesDecrement = element(by.xpath('//a[@data-action="decrementMinutes"]/span'));
+
+            for (i=0; i<10; i++) {
+                minutesDecrement.click(); 
+            }
+            browser.sleep(3000);
         // var day = element(by.className('day'));
         // expect(day).toBe('15');
         element(by.id('am-pm')).click();
