@@ -22,6 +22,7 @@ describe('EHR-TOOL e2e test automation/', function () {
     var guarantor = require('../appointment-info/guarantor.js');
     var allergies = require('../appointment-info/allergies.js');
     var family = require('../appointment-info/family_medical_history.js');
+    // var patientStatements = require('../appointment-info/patient_statements.js');
     it('should able to type the book name', function () {
         question_page.selectExerciseGoal();
     });

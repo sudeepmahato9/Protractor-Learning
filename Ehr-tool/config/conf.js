@@ -18,9 +18,13 @@ exports.config = {
         baseDirectory: 'Reports/screenshots'
      }).getJasmine2Reporter());
     },
-    // Spec patterns are relative to the current working directory when
-    // protractor is called.
-    specs: ['../test/*_spec.js'],
+   /*  Spec patterns are relative to the current working directory when
+    protractor is called. */
+    // specs: ['../test_spec/*_spec.js'],
+    suites : {
+       smoke: ['../test_spec/appointment-info_test_spec.js'],
+        test: ['../test_spec/account_test_spec.js'],
+    },
   
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {

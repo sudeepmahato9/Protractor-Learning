@@ -1,4 +1,4 @@
-require('../appointment-info/question_page')
+require('../appointment-info/question_page');
 var dateSelection = function () {
     this.nextDateButton = function () {
         element(by.id('designNextBtn')).click();
